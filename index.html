@@ -30,9 +30,6 @@
       text-align: center;
       padding: 3rem 2rem;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     header h1 {
       font-size: 3rem;
@@ -136,10 +133,15 @@
       font-size: 1.2em;
       letter-spacing: 2px;
     }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
     .logo {
       width: 80px;
       height: 80px;
-      margin-bottom: 1rem;
     }
     @media (max-width: 768px) {
       header h1 {
@@ -158,10 +160,14 @@
 </head>
 <body>
   <header>
-    <img src="https://img.icons8.com/color/96/000000/chicken.png" alt="Funky Chicken Logo" class="logo">
-    <h1>Funky Chicken</h1>
-    <p>Where Flavor Gets Funky!</p>
-    <p>Rating: <span class="stars">★★★★☆</span> 3.9 (93 reviews)</p>
+    <div class="header-content">
+      <img src="https://img.icons8.com/color/96/chicken--v1.png" alt="Funky Chicken Logo" class="logo">
+      <div class="title-section">
+        <h1>Funky Chicken</h1>
+        <p>Where Flavor Gets Funky!</p>
+        <p>Rating: <span class="stars">★★★★☆</span> 3.9 (93 reviews)</p>
+      </div>
+    </div>
   </header>
 
   <nav>
