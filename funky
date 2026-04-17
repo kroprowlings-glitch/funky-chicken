@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funky Chicken – Kapenguria</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(45deg, #ff5722, #ff9800);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .menu-item {
+      background: #ffe0b2;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Funky Chicken</h1>
+    <p>Where Flavor Gets Funky!</p>
+    <p>Rating: ⭐ 3.9 (93 reviews)</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Located in Makutano, Kapenguria, Funky Chicken is your go‑to spot for delicious chicken, crispy chips, and a funky vibe. We offer dine‑in, drive‑through, and delivery services at pocket‑friendly prices (Ksh 1–500 per person).</p>
+  </section>
+
+  <section id="menu">
+    <h2>Menu Highlights</h2>
+    <div class="menu-item">
+      <h3>Signature Chicken</h3>
+      <p>Juicy, flavorful, and cooked to perfection.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Golden Chips</h3>
+      <p>Crispy, golden fries loved by locals.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Combo Meals</h3>
+      <p>Chicken + Chips + Drink at unbeatable prices.</p>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2>Customer Reviews</h2>
+    <p>“Best chicken in town!” – Local Guide</p>
+    <p>“Affordable and tasty, perfect for quick bites.” – Happy Customer</p>
+  </section>
+
+  <section id="contact">
+    <h2>Find Us</h2>
+    <p>📍 735V+2GF, Makutano, Kapenguria</p>
+    <p>📞 0714 840062</p>
+    <p>⏰ Open daily, closes at 6 pm</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Funky Chicken | Join the Funky Flock!</p>
+  </footer>
+</body>
+</html>
