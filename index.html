@@ -10,20 +10,40 @@
       margin: 0;
       background: #fff8f0;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background: linear-gradient(45deg, #ff5722, #ff9800);
+      background: linear-gradient(45deg, #ff5722, #ff9800), url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+      background-size: cover;
+      background-position: center;
       color: white;
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 2rem;
+      position: relative;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
     }
     header h1 {
       font-size: 3rem;
       margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     header p {
       font-style: italic;
       margin-top: 0.5rem;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
     nav {
       background: #333;
@@ -31,11 +51,18 @@
       justify-content: center;
       gap: 2rem;
       padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #ff5722;
     }
     section {
       padding: 2rem;
@@ -45,14 +72,48 @@
     .menu-item {
       background: #ffe0b2;
       margin: 1rem 0;
-      padding: 1rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .menu-item img {
+      width: 80px;
+      height: 80px;
       border-radius: 8px;
+      object-fit: cover;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
     }
     footer {
       background: #333;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .menu-item {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -77,17 +138,28 @@
 
   <section id="menu">
     <h2>Menu Highlights</h2>
-    <div class="menu-item">
-      <h3>Signature Chicken</h3>
-      <p>Juicy, flavorful, and cooked to perfection.</p>
-    </div>
-    <div class="menu-item">
-      <h3>Golden Chips</h3>
-      <p>Crispy, golden fries loved by locals.</p>
-    </div>
-    <div class="menu-item">
-      <h3>Combo Meals</h3>
-      <p>Chicken + Chips + Drink at unbeatable prices.</p>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Signature Chicken">
+        <div>
+          <h3>Signature Chicken</h3>
+          <p>Juicy, flavorful, and cooked to perfection.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Golden Chips">
+        <div>
+          <h3>Golden Chips</h3>
+          <p>Crispy, golden fries loved by locals.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Combo Meals">
+        <div>
+          <h3>Combo Meals</h3>
+          <p>Chicken + Chips + Drink at unbeatable prices.</p>
+        </div>
+      </div>
     </div>
   </section>
 
